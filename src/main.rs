@@ -269,6 +269,7 @@ fn main() {
         "install" => cmd_install(args.get(2).map(String::as_str)),
         "init-shell" => cmd_init_shell(),
         "help" | "--help" | "-h" => cmd_help(),
+        "--version" | "-V" => println!("pyenv-takeout {}", env!("CARGO_PKG_VERSION")),
         unknown => {
             eprintln!("Unknown command: {}", unknown);
             eprintln!("Run 'pyenv-takeout help' for usage.");
