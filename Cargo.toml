@@ -1,0 +1,17 @@
+[package]
+name = "pyenv-takeout"
+version = "0.1.0"
+edition = "2021"
+description = "Manage Python virtual environments with deterministic path-based names"
+license = "MIT"
+repository = "https://github.com/gndps/pyenv-takeout"
+homepage = "https://github.com/gndps/pyenv-takeout"
+
+[[bin]]
+name = "pyenv-takeout"
+path = "src/main.rs"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
